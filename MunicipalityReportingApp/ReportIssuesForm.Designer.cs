@@ -28,106 +28,128 @@
             this.btnSubmit = new System.Windows.Forms.Button();
             this.btnBackToMainMenu = new System.Windows.Forms.Button();
             this.SuspendLayout();
+
             // 
             // lblLocation
             // 
             this.lblLocation.AutoSize = true;
-            this.lblLocation.Location = new System.Drawing.Point(12, 15);
+            this.lblLocation.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblLocation.Location = new System.Drawing.Point(20, 20);
             this.lblLocation.Name = "lblLocation";
-            this.lblLocation.Size = new System.Drawing.Size(48, 13);
+            this.lblLocation.Size = new System.Drawing.Size(68, 21);
             this.lblLocation.TabIndex = 0;
             this.lblLocation.Text = "Location:";
+
             // 
             // txtLocation
             // 
-            this.txtLocation.Location = new System.Drawing.Point(66, 12);
+            this.txtLocation.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txtLocation.Location = new System.Drawing.Point(120, 20);
             this.txtLocation.Name = "txtLocation";
-            this.txtLocation.Size = new System.Drawing.Size(200, 20);
+            this.txtLocation.Size = new System.Drawing.Size(250, 29);
             this.txtLocation.TabIndex = 1;
+
             // 
             // lblCategory
             // 
             this.lblCategory.AutoSize = true;
-            this.lblCategory.Location = new System.Drawing.Point(12, 41);
+            this.lblCategory.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblCategory.Location = new System.Drawing.Point(20, 70);
             this.lblCategory.Name = "lblCategory";
-            this.lblCategory.Size = new System.Drawing.Size(52, 13);
+            this.lblCategory.Size = new System.Drawing.Size(72, 21);
             this.lblCategory.TabIndex = 2;
             this.lblCategory.Text = "Category:";
+
             // 
             // cbCategory
             // 
-            this.cbCategory.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbCategory.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.cbCategory.FormattingEnabled = true;
             this.cbCategory.Items.AddRange(new object[] {
-            "Sanitation",
-            "Roads",
-            "Utilities"});
-            this.cbCategory.Location = new System.Drawing.Point(66, 38);
+                "Road Maintenance",
+                "Street Lighting",
+                "Waste Management",
+                "Parks and Recreation",
+                "Public Safety"
+            });
+            this.cbCategory.Location = new System.Drawing.Point(120, 70);
             this.cbCategory.Name = "cbCategory";
-            this.cbCategory.Size = new System.Drawing.Size(200, 21);
+            this.cbCategory.Size = new System.Drawing.Size(250, 29);
             this.cbCategory.TabIndex = 3;
+
             // 
             // lblDescription
             // 
             this.lblDescription.AutoSize = true;
-            this.lblDescription.Location = new System.Drawing.Point(12, 68);
+            this.lblDescription.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblDescription.Location = new System.Drawing.Point(20, 120);
             this.lblDescription.Name = "lblDescription";
-            this.lblDescription.Size = new System.Drawing.Size(63, 13);
+            this.lblDescription.Size = new System.Drawing.Size(87, 21);
             this.lblDescription.TabIndex = 4;
             this.lblDescription.Text = "Description:";
+
             // 
             // rtbDescription
             // 
-            this.rtbDescription.Location = new System.Drawing.Point(15, 84);
+            this.rtbDescription.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.rtbDescription.Location = new System.Drawing.Point(20, 150);
             this.rtbDescription.Name = "rtbDescription";
-            this.rtbDescription.Size = new System.Drawing.Size(251, 96);
+            this.rtbDescription.Size = new System.Drawing.Size(350, 100);
             this.rtbDescription.TabIndex = 5;
-            this.rtbDescription.Text = "";
+
             // 
             // btnAttachMedia
             // 
-            this.btnAttachMedia.Location = new System.Drawing.Point(15, 186);
+            this.btnAttachMedia.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnAttachMedia.Location = new System.Drawing.Point(20, 270);
             this.btnAttachMedia.Name = "btnAttachMedia";
-            this.btnAttachMedia.Size = new System.Drawing.Size(75, 23);
+            this.btnAttachMedia.Size = new System.Drawing.Size(150, 30);
             this.btnAttachMedia.TabIndex = 6;
             this.btnAttachMedia.Text = "Attach Media";
             this.btnAttachMedia.UseVisualStyleBackColor = true;
             this.btnAttachMedia.Click += new System.EventHandler(this.btnAttachMedia_Click);
+
             // 
             // lblAttachment
             // 
             this.lblAttachment.AutoSize = true;
-            this.lblAttachment.Location = new System.Drawing.Point(96, 191);
+            this.lblAttachment.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblAttachment.Location = new System.Drawing.Point(180, 275);
             this.lblAttachment.Name = "lblAttachment";
-            this.lblAttachment.Size = new System.Drawing.Size(89, 13);
+            this.lblAttachment.Size = new System.Drawing.Size(120, 21);
             this.lblAttachment.TabIndex = 7;
             this.lblAttachment.Text = "No file selected.";
+
             // 
             // btnSubmit
             // 
-            this.btnSubmit.Location = new System.Drawing.Point(191, 215);
+            this.btnSubmit.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnSubmit.Location = new System.Drawing.Point(20, 320);
             this.btnSubmit.Name = "btnSubmit";
-            this.btnSubmit.Size = new System.Drawing.Size(75, 23);
+            this.btnSubmit.Size = new System.Drawing.Size(150, 30);
             this.btnSubmit.TabIndex = 8;
             this.btnSubmit.Text = "Submit";
             this.btnSubmit.UseVisualStyleBackColor = true;
             this.btnSubmit.Click += new System.EventHandler(this.btnSubmit_Click);
+
             // 
             // btnBackToMainMenu
             // 
-            this.btnBackToMainMenu.Location = new System.Drawing.Point(15, 215);
+            this.btnBackToMainMenu.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnBackToMainMenu.Location = new System.Drawing.Point(220, 320);
             this.btnBackToMainMenu.Name = "btnBackToMainMenu";
-            this.btnBackToMainMenu.Size = new System.Drawing.Size(125, 23);
+            this.btnBackToMainMenu.Size = new System.Drawing.Size(150, 30);
             this.btnBackToMainMenu.TabIndex = 9;
-            this.btnBackToMainMenu.Text = "Back to Main Menu";
+            this.btnBackToMainMenu.Text = "Back to Menu";
             this.btnBackToMainMenu.UseVisualStyleBackColor = true;
             this.btnBackToMainMenu.Click += new System.EventHandler(this.btnBackToMainMenu_Click);
+
             // 
             // ReportIssuesForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(284, 261);
+            this.ClientSize = new System.Drawing.Size(400, 370);
             this.Controls.Add(this.btnBackToMainMenu);
             this.Controls.Add(this.btnSubmit);
             this.Controls.Add(this.lblAttachment);

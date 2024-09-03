@@ -19,19 +19,28 @@ namespace MunicipalityReportingApp
 
         private void ViewReportedIssuesForm_Load(object sender, EventArgs e)
         {
-            // Set up ListView
+            SetupListView();
+            LoadIssues();
+        }
+
+        private void SetupListView()
+        {
             lvReportedIssues.View = View.Details;
             lvReportedIssues.Columns.Add("Location", 100);
             lvReportedIssues.Columns.Add("Category", 100);
             lvReportedIssues.Columns.Add("Description", 200);
             lvReportedIssues.Columns.Add("Attachment", 100);
+        }
 
-            // Load issues into ListView
+        private void LoadIssues()
+        {
+            lvReportedIssues.Items.Clear();
+
             foreach (var issue in ReportedIssues.IssuesList)
             {
-                var item = new ListViewItem(issue.Location);
-                item.SubItems.Add(issue.Category);
-                item.SubItems.Add(issue.Description);
+                var item = new ListViewItem(issue.Location ?? "N/A");
+                item.SubItems.Add(issue.Category ?? "N/A");
+                item.SubItems.Add(issue.Description ?? "N/A");
                 item.SubItems.Add(string.IsNullOrEmpty(issue.Attachment) ? "No attachment" : issue.Attachment);
 
                 lvReportedIssues.Items.Add(item);
