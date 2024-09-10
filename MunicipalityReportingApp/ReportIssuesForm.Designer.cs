@@ -4,6 +4,7 @@
     {
         private System.ComponentModel.IContainer components = null;
 
+
         protected override void Dispose(bool disposing)
         {
             if (disposing && (components != null))
@@ -48,6 +49,7 @@
             this.txtLocation.Name = "txtLocation";
             this.txtLocation.Size = new System.Drawing.Size(250, 29);
             this.txtLocation.TabIndex = 1;
+            this.txtLocation.TextChanged += new System.EventHandler(this.txtLocation_TextChanged);
 
             // 
             // lblCategory
@@ -76,6 +78,7 @@
             this.cbCategory.Name = "cbCategory";
             this.cbCategory.Size = new System.Drawing.Size(250, 29);
             this.cbCategory.TabIndex = 3;
+            this.cbCategory.SelectedIndexChanged += new System.EventHandler(this.cbCategory_SelectedIndexChanged);
 
             // 
             // lblDescription
@@ -96,6 +99,7 @@
             this.rtbDescription.Name = "rtbDescription";
             this.rtbDescription.Size = new System.Drawing.Size(350, 100);
             this.rtbDescription.TabIndex = 5;
+            this.rtbDescription.TextChanged += new System.EventHandler(this.rtbDescription_TextChanged);
 
             // 
             // btnAttachMedia
@@ -145,11 +149,21 @@
             this.btnBackToMainMenu.Click += new System.EventHandler(this.btnBackToMainMenu_Click);
 
             // 
+            // progressBar
+            // 
+            this.progressBar = new System.Windows.Forms.ProgressBar();
+            this.progressBar.Location = new System.Drawing.Point(20, 370);
+            this.progressBar.Name = "progressBar";
+            this.progressBar.Size = new System.Drawing.Size(350, 23);
+            this.progressBar.TabIndex = 10;
+
+            // 
             // ReportIssuesForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(400, 370);
+            this.ClientSize = new System.Drawing.Size(400, 420);
+            this.Controls.Add(this.progressBar);
             this.Controls.Add(this.btnBackToMainMenu);
             this.Controls.Add(this.btnSubmit);
             this.Controls.Add(this.lblAttachment);
@@ -178,5 +192,6 @@
         private System.Windows.Forms.Label lblAttachment;
         private System.Windows.Forms.Button btnSubmit;
         private System.Windows.Forms.Button btnBackToMainMenu;
+        private System.Windows.Forms.ProgressBar progressBar;
     }
 }
