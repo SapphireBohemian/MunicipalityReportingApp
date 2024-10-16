@@ -34,5 +34,11 @@ namespace MunicipalityReportingApp
             viewForm.ShowDialog();
         }
 
+        private void btnViewLocalEvents_Click(object sender, EventArgs e)
+        {
+            LocalEventsForm localEventsForm = new LocalEventsForm();
+            localEventsForm.ShowDialog();
+        }
+
     }
 }
