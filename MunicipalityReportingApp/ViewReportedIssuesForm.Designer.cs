@@ -101,10 +101,12 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.ClientSize = new System.Drawing.Size(686, 364);
             this.Controls.Add(this.lblHeader);
             this.Controls.Add(this.btnBackToMainMenu);
             this.Controls.Add(this.lvReportedIssues);
+            this.MaximizeBox = false;
             this.Name = "ViewReportedIssuesForm";
             this.Text = "View Reported Issues";
             this.Load += new System.EventHandler(this.ViewReportedIssuesForm_Load);
