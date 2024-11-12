@@ -122,7 +122,7 @@
             // 
             // MainMenuForm
             // 
-            this.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.BackColor = System.Drawing.Color.Silver;
             this.ClientSize = new System.Drawing.Size(469, 500);
             this.Controls.Add(this.pictureBoxLogo);
             this.Controls.Add(this.lblHeader);
