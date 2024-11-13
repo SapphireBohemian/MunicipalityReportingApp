@@ -4,7 +4,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-// RedBlackTree.cs
 
 namespace MunicipalityReportingApp
 {
@@ -21,7 +20,7 @@ namespace MunicipalityReportingApp
         public RedBlackTreeNode(ServiceRequest request)
         {
             Request = request;
-            Color = Color.Red; // New nodes are red by default
+            Color = Color.Red; 
             Left = Right = Parent = null;
         }
     }

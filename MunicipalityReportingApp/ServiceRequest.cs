@@ -4,15 +4,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-// ServiceRequest.cs
+
 namespace MunicipalityReportingApp
 {
     public class ServiceRequest
     {
-        public string Id { get; set; } // Unique identifier for the request
-        public string Description { get; set; } // Description of the issue
-        public string Status { get; set; } // Current status of the request
-        public DateTime SubmissionDate { get; set; } // Date when the request was submitted
+        public string Id { get; set; } 
+        public string Description { get; set; } 
+        public string Status { get; set; } 
+        public DateTime SubmissionDate { get; set; } 
 
         public ServiceRequest(string id, string description, string status, DateTime submissionDate)
         {

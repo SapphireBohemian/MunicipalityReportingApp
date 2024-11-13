@@ -17,12 +17,12 @@ namespace MunicipalityReportingApp
             visited.Add(startVertex);
             foreach (var neighbor in graph.GetNeighbors(startVertex))
             {
-                edgeList.Add((startVertex, neighbor, 1)); // Assuming weight is 1 for simplicity
+                edgeList.Add((startVertex, neighbor, 1)); 
             }
 
             while (edgeList.Count > 0)
             {
-                edgeList.Sort((x, y) => x.Item3.CompareTo(y.Item3)); // Sort edges by weight
+                edgeList.Sort((x, y) => x.Item3.CompareTo(y.Item3)); 
                 var edge = edgeList[0];
                 edgeList.RemoveAt(0);
 
@@ -33,7 +33,7 @@ namespace MunicipalityReportingApp
 
                     foreach (var neighbor in graph.GetNeighbors(edge.Item2))
                     {
-                        edgeList.Add((edge.Item2, neighbor, 1)); // Assuming weight is 1 for simplicity
+                        edgeList.Add((edge.Item2, neighbor, 1)); 
                     }
                 }
             }
