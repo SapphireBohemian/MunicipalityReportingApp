@@ -54,13 +54,17 @@ namespace MunicipalityReportingApp
 
         private void LoadServiceRequests()
         {
-            // Sample service requests
-            var request1 = new ServiceRequest("1", "Street light out", "In Progress", DateTime.Now);
-            var request2 = new ServiceRequest("2", "Water leak", "Resolved", DateTime.Now.AddDays(-1));
-            var request3 = new ServiceRequest("3", "Pothole repair", "Pending", DateTime.Now.AddDays(1));
-            var request4 = new ServiceRequest("4", "Street light stuck", "In Progress", DateTime.Now);
-            var request5 = new ServiceRequest("5", "Gas leak", "Pending", DateTime.Now.AddDays(-1));
-            var request6 = new ServiceRequest("6", "Pipe repair", "Resolved", DateTime.Now.AddDays(1));
+            // Sample service requests with unique IDs
+            var request1 = new ServiceRequest("S101", "Street light out", "In Progress", DateTime.Now);
+            var request2 = new ServiceRequest("W102", "Water leak", "Resolved", DateTime.Now.AddDays(-1));
+            var request3 = new ServiceRequest("P103", "Pothole repair", "Pending", DateTime.Now.AddDays(1));
+            var request4 = new ServiceRequest("S104", "Street light stuck", "In Progress", DateTime.Now);
+            var request5 = new ServiceRequest("G105", "Gas leak", "Pending", DateTime.Now.AddDays(-1));
+            var request6 = new ServiceRequest("P106", "Pipe repair", "Resolved", DateTime.Now.AddDays(1));
+            var request7 = new ServiceRequest("S107", "Traffic signal malfunction", "Pending", DateTime.Now);
+            var request8 = new ServiceRequest("W108", "Sewage backup", "In Progress", DateTime.Now.AddDays(-2));
+            var request9 = new ServiceRequest("G109", "Gas meter reading", "Resolved", DateTime.Now.AddDays(2));
+            var request10 = new ServiceRequest("P110", "Sidewalk repair", "Pending", DateTime.Now.AddDays(3));
 
             // Insert into data structures
             requestBST.Insert(request1);
@@ -69,6 +73,10 @@ namespace MunicipalityReportingApp
             requestBST.Insert(request4);
             requestBST.Insert(request5);
             requestBST.Insert(request6);
+            requestBST.Insert(request7);
+            requestBST.Insert(request8);
+            requestBST.Insert(request9);
+            requestBST.Insert(request10);
 
             requestAVL.Insert(request1);
             requestAVL.Insert(request2);
@@ -76,6 +84,10 @@ namespace MunicipalityReportingApp
             requestAVL.Insert(request4);
             requestAVL.Insert(request5);
             requestAVL.Insert(request6);
+            requestAVL.Insert(request7);
+            requestAVL.Insert(request8);
+            requestAVL.Insert(request9);
+            requestAVL.Insert(request10);
 
             requestRB.Insert(request1);
             requestRB.Insert(request2);
@@ -83,6 +95,10 @@ namespace MunicipalityReportingApp
             requestRB.Insert(request4);
             requestRB.Insert(request5);
             requestRB.Insert(request6);
+            requestRB.Insert(request7);
+            requestRB.Insert(request8);
+            requestRB.Insert(request9);
+            requestRB.Insert(request10);
 
             requestHeap.Insert(request1);
             requestHeap.Insert(request2);
@@ -90,6 +106,10 @@ namespace MunicipalityReportingApp
             requestHeap.Insert(request4);
             requestHeap.Insert(request5);
             requestHeap.Insert(request6);
+            requestHeap.Insert(request7);
+            requestHeap.Insert(request8);
+            requestHeap.Insert(request9);
+            requestHeap.Insert(request10);
 
             // Add service requests to the static list for display
             ReportedRequests.Add(request1);
@@ -98,16 +118,22 @@ namespace MunicipalityReportingApp
             ReportedRequests.Add(request4);
             ReportedRequests.Add(request5);
             ReportedRequests.Add(request6);
+            ReportedRequests.Add(request7);
+            ReportedRequests.Add(request8);
+            ReportedRequests.Add(request9);
+            ReportedRequests.Add(request10);
 
             // Debugging: Check how many requests were added
             Console.WriteLine($"Total Requests Loaded: {ReportedRequests.RequestsList.Count}");
-
 
             // Build graph relationships
             requestGraph.AddEdge(request1.Id, request2.Id);
             requestGraph.AddEdge(request2.Id, request3.Id);
             requestGraph.AddEdge(request1.Id, request3.Id);
             requestGraph.AddEdge(request3.Id, request4.Id);
+            requestGraph.AddEdge(request5.Id, request6.Id);
+            requestGraph.AddEdge(request7.Id, request8.Id);
+            requestGraph.AddEdge(request9.Id, request10.Id);
 
             PopulateChart();
         }
