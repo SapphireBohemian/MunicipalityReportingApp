@@ -76,16 +76,17 @@
             // 
             // btnServiceRequestStatus
             // 
-            this.btnServiceRequestStatus.BackColor = System.Drawing.Color.LightGray;
+            this.btnServiceRequestStatus.BackColor = System.Drawing.Color.LightSkyBlue;
             this.btnServiceRequestStatus.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnServiceRequestStatus.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.btnServiceRequestStatus.Location = new System.Drawing.Point(100, 370);
+            this.btnServiceRequestStatus.Location = new System.Drawing.Point(100, 330);
             this.btnServiceRequestStatus.Name = "btnServiceRequestStatus";
             this.btnServiceRequestStatus.Size = new System.Drawing.Size(279, 40);
-            this.btnServiceRequestStatus.TabIndex = 3;
+            this.btnServiceRequestStatus.TabIndex = 4;
             this.btnServiceRequestStatus.Text = "Service Request Status";
             this.btnServiceRequestStatus.UseVisualStyleBackColor = true;
-            // 
+            this.btnServiceRequestStatus.Click += new System.EventHandler(this.btnServiceRequestStatus_Click);
+            //
             // btnViewReportedIssues
             // 
             this.btnViewReportedIssues.BackColor = System.Drawing.Color.LightSkyBlue;

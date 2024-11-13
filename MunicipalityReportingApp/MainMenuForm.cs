@@ -40,5 +40,14 @@ namespace MunicipalityReportingApp
             localEventsForm.ShowDialog();
         }
 
+        private void btnServiceRequestStatus_Click(object sender, EventArgs e)
+        {
+           
+
+            // Open the Service Request Status Form
+            ServiceRequestStatusForm serviceRequestStatusForm = new ServiceRequestStatusForm();
+            serviceRequestStatusForm.ShowDialog();
+        }
+
     }
 }
